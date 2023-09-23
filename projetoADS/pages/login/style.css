@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#Header_Home {
+    margin-top: -19px;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(11, 11, 53);
+}
+#Header_Home img {
+    margin-top: 7px;
+    margin-left: 30px;
+    width: 180px;
+}
+#Header_Home  nav {
+    float: right;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+#Header_Home nav a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+#Header_Home nav a:hover{
+    color: rgb(59, 57, 57);
+}
+#Login_conteiner {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+}
+#Form_Login {
+    background-color: rgba(128, 128, 128, 0.473);
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: solid 1px black;
+    margin-bottom: 50px;
+}
+#Form_Login #log {
+    font-size: 30px;
+}
+#Form_Login label input {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+#Form_Login  button {
+    background-color: rgba(103, 224, 103, 0.753);
+    margin-bottom: 20px;
+    width: 200px;
+    height: 35px;
+    border-radius: 15px;
+    border: solid rgba(0, 0, 0, 0.473) 1px;
+}
+#Form_Login  button:hover {
+    width: 210px;
+    height: 45px;
+    border: solid 2px;
+}
+
+
+
+
+
+#Footer {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: rgb(11, 11, 53);
+}
+#Footer ul {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 20%;
+    margin-left: 10%;
+}
+#Footer h5 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+#Footer p {
+    line-height: 30px;
+    color: white;
+}
+#Down {
+    width: 100%;
+    height: auto;
+    background-color: rgb(136, 71, 197);
+}
+#Down p {
+    margin-left: 30px;
+    color: white;
+}

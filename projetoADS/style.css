@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#Header_Home {
+    margin-top: -19px;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(11, 11, 53);
+}
+#Header_Home img {
+    margin-top: 7px;
+    margin-left: 30px;
+    width: 180px;
+}
+#Header_Home  nav {
+    float: right;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+#Header_Home nav a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+#Header_Home nav a:hover{
+    color: rgb(59, 57, 57);
+}
+
+#Propaganda_Body {
+    width: 100%;
+    height: 300px;
+    background-image: url(./assets/banner-taxa1.png);
+    background-position: center center;
+}
+
+
+#Conteiner_Eventos {
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+}
+#Conteudo_Shows{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+#Evento {
+    display: flex;
+    width: 40%;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border: solid rgba(43, 42, 42, 0.514) 1px;
+}
+#Evento img {
+    margin-left: 10px;
+    width: 150px;
+}
+#Evento div {
+    margin-left: 10px;
+    text-align: center;
+}
+#Evento div p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+}
+#Evento:hover{
+    width: 42%;
+    border: solid 2px;
+}
+#Footer {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: rgb(11, 11, 53);
+}
+#Footer ul {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 20%;
+    margin-left: 10%;
+}
+#Footer h5 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+#Footer p {
+    line-height: 30px;
+    color: white;
+}
+#Down {
+    width: 100%;
+    height: auto;
+    background-color: rgb(136, 71, 197);
+}
+#Down p {
+    margin-left: 30px;
+    color: white;
+}
