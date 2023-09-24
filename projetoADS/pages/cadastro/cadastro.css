@@ -34,6 +34,7 @@
     margin-left: 10%;
 }
 #Form_Cadastro {
+    text-align: center;
     background-color: rgba(128, 128, 128, 0.473);
     width: 80%;
     margin-left: 10%;
@@ -41,12 +42,8 @@
     border: solid 1px black;
     margin-bottom: 50px;
 }
-#Form_Cadastro label {
-    margin-left: 30px;
-}
-#Form_Cadastro label input {
-    margin-left: 100px;
-    width: 300px;
+#Form_Cadastro input {
+    width: 80%;
     height: 30px;
     margin-bottom: 30px;
     border-radius: 5px;
@@ -58,7 +55,6 @@
     background-color: white;
 }
 #Form_Cadastro button {
-    margin-left: 200px;
     margin-bottom: 10px;
     width: 200px;
     height: 35px;
@@ -68,7 +64,6 @@
 }
 #Form_Cadastro button:hover{
     width: 210px;
-    height: 45px;
     border: solid black 1px;
 }
 

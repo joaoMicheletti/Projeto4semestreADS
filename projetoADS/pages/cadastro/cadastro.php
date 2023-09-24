@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    ,<link rel="stylesheet" href="./style.css">
+    ,<link rel="stylesheet" href="./cadastro.css">
     <title>name project</title>
 </head>
 <header>
@@ -25,6 +25,7 @@
         <h1>Cadastre-se</h1>
         <br/>
         <form id="Form_Cadastro">
+            <br/>
             <p>
                 Cadastre-se para obter seu login e senha de acesso rápido. 
                 Assim você pode efetuar as suas compras através do site 
@@ -33,29 +34,35 @@
             <br/>
             <br/>
             <label>
-                Nome :<br/>
-                <input type="text" placeholder="Nome:"/>
+                Nome:
             </label>
             <br/>
-            <label>
-                Telefone :<br/>
-                <input type="number" placeholder="telefone:"/>
-            </label>
+            <input type="text" placeholder="Nome:"/>
             <br/>
             <label>
-                E-mail : <br/>
-                <input type="email" placeholder="E-mail"/>
+                Telefone:
             </label>
             <br/>
-            <label>
-                Senha : <br/>
-                <input type="password" placeholder="Senha"/>
-            </label>
+            <input type="number" placeholder="telefone:"/>
             <br/>
             <label>
-                Confirmar Senha :<br/>
-                <input type="password" placeholder="Confirmar Senha:"/>
+                E-mail: 
             </label>
+            <br/>
+            <input type="email" placeholder="E-mail"/>
+            <br/>
+            <label>
+                Senha:
+            </label>
+            <br/>
+            <input type="password" placeholder="Senha"/>
+            <br/>
+            <label>
+                Confirmar:
+            </label>
+            <br/>
+            <input type="password" placeholder="Confirmar Senha:"/>
+            <br/>
             <br/>
             <br/>
             <p>Termos de uso e politica de privacidade da LGPD:</p>

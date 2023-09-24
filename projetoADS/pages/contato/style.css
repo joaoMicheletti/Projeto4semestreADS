@@ -28,6 +28,13 @@
 #Header_Home nav a:hover{
     color: rgb(59, 57, 57);
 }
+#Send_email {
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+}
 
 
 

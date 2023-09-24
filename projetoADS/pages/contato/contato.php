@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    ,<link rel="stylesheet" href="./style.css">
+    ,<link rel="stylesheet" href=".//style.css">
     <title>name project</title>
 </head>
 <header>
@@ -20,7 +20,15 @@
     </div>
 </header>
 <body>
-<footer id="Footer">
+    <div id="Send_email">
+        <br/>
+        <br/>
+        <br/>
+        <p>Contatenos através de E-mail temos profissionáis 20H por dia a postos para atender nossos clientes</p>
+        <br/>
+        <a href="mailto:jv604014@gmail.com?subject=contato atraves da plataforma">Click aqui para nos Enviar email</a>
+    </div>
+    <footer id="Footer">
         <ul><img src="../../assets/logo-ingressofit.jpeg" style="width: 200px;" alt="logo"></ul>
         <ul>
             <h5>Sobre</h5>
