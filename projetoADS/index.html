@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ,<link rel="stylesheet" href="./style.css">
+    <title>name project</title>
+    <script>
+        function Gustavo(){
+            const sessionId = localStorage.getItem('sessionId');
+            if(sessionId === null ){
+                alert('Para comprar um emgresso você precisa efetuar seu login.')
+            }
+            const img = document.querySelector("#img1").src;
+            const show = document.querySelector("#show1").textContent;
+            const horaData = document.querySelector("#horaData1").textContent;
+            const local = document.querySelector("#local1").textContent;
+            const preco = document.querySelector("#preco1").textContent;
+            console.log(img,show,horaData,local,preco);
+        };
+        function Japinha(){
+            const sessionId = localStorage.getItem('sessionId');
+            if(sessionId === null ){
+                alert('Para comprar um emgresso você precisa efetuar seu login.')
+            }
+            const img = document.querySelector("#img2").src;
+            const show = document.querySelector("#show2").textContent;
+            const horaData = document.querySelector("#horaData2").textContent;
+            const local = document.querySelector("#local2").textContent;
+            const preco = document.querySelector("#preco2").textContent;
+            console.log(img,show,horaData,local,preco);
+        };
+        function Joao(){
+            const sessionId = localStorage.getItem('sessionId');
+            if(sessionId === null ){
+                alert('Para comprar um emgresso você precisa efetuar seu login.')
+            }
+            const img = document.querySelector("#img3").src;
+            const show = document.querySelector("#show3").textContent;
+            const horaData = document.querySelector("#horaData3").textContent;
+            const local = document.querySelector("#local3").textContent;
+            const preco = document.querySelector("#preco3").textContent;
+            console.log(img,show,horaData,local,preco);
+        };
+        function Ryan(){
+            const sessionId = localStorage.getItem('sessionId');
+            if(sessionId === null ){
+                alert('Para comprar um emgresso você precisa efetuar seu login.')
+            }
+            const img = document.querySelector("#img4").src;
+            const show = document.querySelector("#show4").textContent;
+            const horaData = document.querySelector("#horaData4").textContent;
+            const local = document.querySelector("#local4").textContent;
+            const preco = document.querySelector("#preco4").textContent;
+            console.log(img,show,horaData,local,preco);
+        };
+    </script>
+</head>
+<header>
+    <div id="Header_Home">
+        <img src="./assets/logo-ingressofit.jpeg" alt="logo_site" />
+        <nav>
+            <ul>
+                <a href="/projetoADS">HOME</a>
+                <a href="/projetoADS/pages/login/login.php">LOGIN</a>
+                <a href="/projetoADS/pages/cadastro/cadastro.php">CADASTRAR</a>
+                <a href="/projetoADS/pages/contato/contato.php">CONTATO</a>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div id="Propaganda_Body">
+    </div>
+    <div id="Conteiner_Eventos">
+        <br/>
+        <h2>Shows</h2>
+        <div id="Conteudo_Shows">
+            <br/>
+            <div id="Evento">
+                <img id="img1" src="./assets/home/gus.jpeg" alt="img_show">
+                <div id="Info_show">
+                    <p id="show1">Gustavo Lima</p>
+                    <p id="horaData1">19:30 - 02/02/2024</p>
+                    <p id="local1">Santo Amaro</p>
+                    <p id="preco1">R$ 150,00</p>
+                    <button onclick="Gustavo()">Comprar</button>
+                </div>
+            </div> 
+            <div id="Evento">
+                <img id="img2" src="./assets/home/japa.jpeg" alt="img_show">
+                <div id="Info_show">
+                    <p id="show2">Japinha Conde</p>
+                    <p id="horaData2">15:00 - 03/03/2024</p>
+                    <p id="local2">Ossasco</p>
+                    <p id="preco2">R$ 190,00</p>
+                    <button onclick="Japinha()">Comprar</button>
+                </div>
+            </div> 
+            <div id="Evento">
+                <img id="img3" src="./assets/home/joao.jpeg" alt="img_show">
+                <div id="Info_show">
+                    <p id="show3">João Gomes</p>
+                    <p id="horaData3">20:00 - 15/04/2024</p>
+                    <p id="local3">Barretos</p>
+                    <p id="preco3">R$ 500,00</p>
+                    <button onclick="Joao()">Comprar</button>
+                </div>
+            </div> 
+            <div id="Evento">
+                <img id="img4"  src="./assets/home/ryan.jpeg" alt="img_show">
+                <div id="Info_show">
+                    <p id="show4">MC RyanSP</p>
+                    <p id="horaData4">00:00 - 13/06/2024</p>
+                    <p id="local4">Paulista</p>
+                    <p id="preco4">R$ 230,00</p>
+                    <button onclick="Ryan()" >Comprar</button>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <footer id="Footer">
+        <ul><img src="./assets/logo-ingressofit.jpeg" style="width: 200px;" alt="logo"></ul>
+        <ul>
+            <h5>Sobre</h5>
+            <br/>
+            <p>Quem Somos</p>
+            <p>Dúvidas</p>
+            <p>Seja nosso Parceiro</p>
+            <p>Trabalhe conosco</p>
+            <p>Termos de Uso</p>
+        </ul>
+        <ul>
+            <h5>Fale conosco</h5>
+            <br/>
+            <p>11 4002-8922</p>
+            <p>Contato@gmail.com</p>
+        </ul>
+    </footer>
+    <div id="Down">
+        <br/>
+        <p>2023 © Todos os Direitos Reservados | IngressoFIT</p>
+        <br/>
+    </div>
+</body>
+</html>

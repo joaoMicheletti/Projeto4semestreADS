@@ -1,0 +1,38 @@
+nome da empresa : CodeCraft Solutions
+
+banco de dados : mysql.
+nome do banco de dados = "ingressofit"
+tebela usuario = {
+	id,
+	nome,
+	telefone,
+	email,
+	senha	
+}
+código de criação = {
+CREATE TABLE `ingressofit`.`usuario` ( `id` INT(255) NULL , `nome` CHAR(255) NULL , `telefone` CHAR(255) NULL , `email` CHAR(255) NULL , `senha` CHAR(255) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+}
+
+
+
+
+tabele ingressos = {
+	id,
+	id_ususario,
+	nome_show,
+	quantidade,
+	valor_unitario,
+	valor_total
+}
+código de criação = {
+CREATE TABLE INGRESSOS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    nome_show CHAR(255) NOT NULL,
+    quantidade INT NOT NULL,
+    valor_unitario DECIMAL(10, 2) NOT NULL,
+    valor_total DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+);
+}
+
