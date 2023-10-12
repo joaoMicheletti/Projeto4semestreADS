@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     ,<link rel="stylesheet" href="./cadastro.css">
     <title>name project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script>
+        function Register(){
+            var nome = document.querySelector('#nome').value;
+            var phone = document.querySelector('#phone').value;
+            var email = document.querySelector('#email').value;
+            var pass = document.querySelector('#pass').value;
+            var cpass = document.querySelector('#cpass').value;
+            
+            if(nome === ''){
+                alert('Preencha o campo "Nome".');
+            } else if(phone === ''){
+                alert('Preencha o campo "Telefone".');
+            } else if(phone.length < 11){
+                alert("Telefone invalido");
+            }else if(email === ''){
+                alert('Preencha o campo "Email".');
+            } else if(pass === ''){
+                alert('Preencha o campo "Senha".');
+            } else if(cpass === ''){
+                alert('Preeencha o campo "Confirmar".');
+            } else {
+                Data = {
+                    nome,
+                    phone,
+                    email,
+                    pass,
+                    cpass
+                };
+                $.ajax({
+                    url: 'register.php',
+                    data: Data,
+                    type: 'post',
+                    success: function(Response){
+                        alert(Response);
+                    }
+                })
+            }
+        };
+    </script>
 </head>
 <header>
     <div id="Header_Home">
@@ -12,8 +52,8 @@
         <nav>
             <ul>
                 <a href="/projetoADS">HOME</a>
-                <a href="/projetoADS/pages/login/login.php">LOGIN</a>
-                <a href="/projetoADS/pages/cadastro/cadastro.php">CADASTRAR</a>
+                <a href="/projetoADS/pages/login/login.html">LOGIN</a>
+                <a href="/projetoADS/pages/cadastro/cadastro.html">CADASTRAR</a>
                 <a href="/projetoADS/pages/contato/contato.php">CONTATO</a>
             </ul>
         </nav>
@@ -37,31 +77,31 @@
                 Nome:
             </label>
             <br/>
-            <input type="text" placeholder="Nome:"/>
+            <input id="nome" type="text" placeholder="Nome:"/>
             <br/>
             <label>
                 Telefone:
             </label>
             <br/>
-            <input type="number" placeholder="telefone:"/>
+            <input id="phone" type="number" placeholder="telefone:"/>
             <br/>
             <label>
                 E-mail: 
             </label>
             <br/>
-            <input type="email" placeholder="E-mail"/>
+            <input id="email" type="email" placeholder="E-mail"/>
             <br/>
             <label>
                 Senha:
             </label>
             <br/>
-            <input type="password" placeholder="Senha"/>
+            <input id="pass" type="password" placeholder="Senha"/>
             <br/>
             <label>
                 Confirmar:
             </label>
             <br/>
-            <input type="password" placeholder="Confirmar Senha:"/>
+            <input id="cpass" type="password" placeholder="Confirmar Senha:"/>
             <br/>
             <br/>
             <br/>
@@ -76,7 +116,7 @@
                 atraves do link Política de Privacidade.                
             </div>
             <br/>
-            <button>Cadastrar-se</button>
+            <button onclick="Register()" >Cadastrar-se</button>
         </form>
     </div>
     <br/>
@@ -105,3 +145,4 @@
     </div>
 </body>
 </html>
+
