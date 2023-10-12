@@ -24,7 +24,7 @@
         <br/>
         <br/>
         <br/>
-        <p>Contatenos através de E-mail temos profissionáis 20H por dia a postos para atender nossos clientes</p>
+        <p>Contatenos através de E-mail temos profissionáis 24H por dia a postos para atender nossos clientes</p>
         <br/>
         <a href="mailto:jv604014@gmail.com?subject=contato atraves da plataforma">Click aqui para nos Enviar email</a>
     </div>
