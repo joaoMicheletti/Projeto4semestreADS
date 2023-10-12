@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ,<link rel="stylesheet" href="./style.css">
+    <title>name project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function Login(){
+            var email = document.querySelector('.email').value;
+            var senha = document.querySelector('.pass').value;
+            if(email === ''){
+                alert('Preencha o campo "email".');
+            } else if(senha === ''){
+                alert('Preencha o campo "Senha"');
+            } else {
+                const Data = {
+                    email, 
+                    senha
+                };
+                $.ajax({
+                    url: 'login.php',
+                    data: Data,
+                    type: 'post',
+                    success: function(Response){
+                        alert(Response);
+                    }
+                })
+            }
+            console.log(email, senha);
+        };
+    </script>
+</head>
+<header>
+    <div id="Header_Home">
+        <img src="../../assets/logo-ingressofit.jpeg" alt="logo_site" />
+        <nav>
+            <ul>
+                <a href="/projetoADS">HOME</a>
+                <a href="/projetoADS/pages/login/login.php">LOGIN</a>
+                <a href="/projetoADS/pages/cadastro/cadastro.php">CADASTRAR</a>
+                <a href="/projetoADS/pages/contato/contato.php">CONTATO</a>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div id="Login_conteiner">
+        <br/>
+        <h1>Área do Cliente</h1>
+        <br/>
+        <form id="Form_Login">
+            <p>Para prosseguir com sua compra de ingresso é necessário efetuar o login no sistema.</p>
+            <br/>
+            <p id="log">Login</p>
+            <br/>
+            <label>
+                Email:
+                <input class="email" id="CX" type="email" placeholder="Email"/>
+            </label>
+            <br/>
+            <label>
+                Senha:
+                <input class="pass" id="CX" type="password" placeholder="Senha"/>
+            </label>
+            <br/>
+            <button onclick="Login()" id="BTN">Login</button>
+        </form>
+    </div>
+    <footer id="Footer">
+        <ul><img src="../../assets/logo-ingressofit.jpeg" style="width: 200px;" alt="logo"></ul>
+        <ul>
+            <h5>Sobre</h5>
+            <br/>
+            <p>Quem Somos</p>
+            <p>Dúvidas</p>
+            <p>Seja nosso Parceiro</p>
+            <p>Trabalhe conosco</p>
+            <p>Termos de Uso</p>
+        </ul>
+        <ul>
+            <h5>Fale conosco</h5>
+            <br/>
+            <p>11 4002-8922</p>
+            <p>Contato@gmail.com</p>
+        </ul>
+    </footer>
+    <div id="Down">
+        <br/>
+        <p>2023 © Todos os Direitos Reservados | IngressoFIT</p>
+        <br/>
+    </div>
+</body>
+</html>
