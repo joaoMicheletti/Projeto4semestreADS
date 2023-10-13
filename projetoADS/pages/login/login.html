@@ -24,7 +24,15 @@
                     data: Data,
                     type: 'post',
                     success: function(Response){
-                        alert(Response);
+                        if(Response === "usuário ou senha invalodo!"){
+                            alert(Response);
+                        } else if(Response === "Usuário não encontrado!"){
+                            alert(Response);
+                        } else {
+                            localStorage.setItem('sessionId', Response);
+                            alert("Logado com sucesso.");
+                        }
+                        console.log(Response);
                     }
                 })
             }
