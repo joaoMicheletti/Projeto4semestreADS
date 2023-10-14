@@ -25,14 +25,6 @@ tabele ingressos = {
 	valor_total
 }
 código de criação = {
-CREATE TABLE ingressos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_usuario INT,
-    nome_show CHAR(255) NOT NULL,
-    quantidade INT NOT NULL,
-    valor_unitario DECIMAL(10, 2) NOT NULL,
-    valor_total DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id)
-);
+CREATE TABLE `ingressofit`.`ingresos` ( `usuario` VARCHAR(255) NOT NULL , `img` VARCHAR(255) NOT NULL , `nome_show` VARCHAR(255) NOT NULL , `valor_total` VARCHAR(255) NOT NULL ) ENGINE = InnoDB; 
 }
 
