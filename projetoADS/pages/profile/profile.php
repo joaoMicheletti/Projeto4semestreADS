@@ -1,4 +1,10 @@
 <?php
+// objeto referente ao usuário;
+class User {
+    public $nomeUser;
+    public $emailUser;
+    public $phoneUser;
+};
 $servidor = "localhost";
 $userName = "root";
 $password = "Root";
@@ -14,18 +20,33 @@ $user = "SELECT * FROM usuario WHERE email = '$email'";
 $ingressos = "SELECT * FROM ingresos WHERE usuario = '$email'";
 
 //pegando do banco os ingressos;
-$result = mysqli_query($connect, $ingressos);
+$resultIngresso = mysqli_query($connect, $ingressos);
+//pegando do banco o usuário;
+$resultUser =  mysqli_query($connect, $user);
 
-if (mysqli_num_rows($result) > 0) {
-    // O email existe na tabela
-    while ($row = mysqli_fetch_assoc($result)) {
+if (mysqli_num_rows($resultIngresso) > 0) {
+    // pegando os dados de cada linha retornada da tabela ingresso;
+    while ($row = mysqli_fetch_assoc($resultIngresso)) {
         // Aqui, você pode acessar os dados do usuário
-        $usuario = $row['usuario'];
         $img = $row['img'];
         $nome_show = $row['nome_show'];
-        $valor_total = ['valor_total'];
-        echo $usuario, $img;
-    }
+        //vou enviar ao front as variavei dentro de uma strng.
+        //com o intuito de usar o .split do js para quebralas um determinado ponto.
+        echo "$img'/$nome_show";
+    };
+    if (mysqli_num_rows($resultUser) > 0){
+         //pegando dados de cada linha retornada da tabela usuário;
+        while($rows = mysqli_fetch_assoc($resultUser)){
+            $nome = $rows['nome'];
+            $telefone = $rows['telefone'];
+            $userEmail = $rows['email'];
+            //vou enviar ao front as variavei dentro de uma strng.
+        //com o intuito de usar o .split do js para quebralas um determinado ponto.
+        
+            
+            //print $nome;
+        };
+    };
 } else {
     echo "Usuário não encontrado!";
 }
