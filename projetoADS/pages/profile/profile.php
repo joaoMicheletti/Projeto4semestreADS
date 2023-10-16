@@ -51,7 +51,5 @@ if (mysqli_num_rows($resultIngresso) > 0) {
     echo "Usuário não encontrado!";
 }
 
-//pegando dados do usuario;
-//mysqli_query($connect, $user);
 
 ?>
