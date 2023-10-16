@@ -5,7 +5,7 @@ $userName = 'root';
 $password = 'Root';
 $database = 'ingressofit';
 
-$ususario = $_POST['sessionId'];
+$usuario = $_POST['sessionId'];
 $img = $_POST['img'];
 $nome_show = $_POST['show'];
 $horaData = $_POST['horaData'];

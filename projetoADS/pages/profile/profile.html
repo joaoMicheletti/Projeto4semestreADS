@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     ,<link rel="stylesheet" href=".//profile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function Profile(){
+            var sessionId = localStorage.getItem('sessionId');
+            console.log(sessionId);
+            const Data = {
+                sessionId,
+            };
+            $.ajax({
+                url: "profile.php",
+                data: Data,
+                type: 'post',
+                success: function(Response){
+                    console.log(Response);
+                }
+            })
+        }
+    </script>
     <title>name project</title>
 </head>
 <header>
@@ -19,7 +37,7 @@
         </nav>
     </div>
 </header>
-<body>
+<body onload="Profile()">
     <div id="Profile_Conteiner">
         <h1>Área do Cliente</h1>
         <br/>
