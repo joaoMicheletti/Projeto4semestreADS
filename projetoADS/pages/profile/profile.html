@@ -13,9 +13,18 @@
                 sessionId,
             };
             $.ajax({
-                url: "profile.php",
+                url: "profileUser.php",
                 data: Data,
                 type: 'post',
+                success: function(Response){
+                    console.log(Response);
+                }
+            });
+            //chamando pegando os ingressos do usuário;
+            $.ajax({
+                url: "profileIngresso.php",
+                data: Data,
+                type: "post",
                 success: function(Response){
                     console.log(Response);
                 }
