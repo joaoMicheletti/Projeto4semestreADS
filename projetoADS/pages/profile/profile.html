@@ -18,6 +18,14 @@
                 type: 'post',
                 success: function(Response){
                     console.log(Response);
+                    var separados = Response.split('/');
+                    var nome = separados[0];
+                    var phone = separados[1];
+                    var email = separados[2];
+                    console.log(nome)
+                    document.querySelector("#Nome").innerHTML = nome;
+                    document.querySelector("#Email").innerHTML = email;
+                    document.querySelector("#Phone").innerHTML = phone;
                 }
             });
             //chamando pegando os ingressos do usuário;
@@ -57,17 +65,17 @@
         <br/>
         <div id="Info_pessoais">
             <label>Nome:</label>
-            <p>Joao Victor de Andrade Micheletti</p>
+            <p id="Nome"></p>
             <label>E-mail:</label>
-            <p>jv604014@gmail.com</p>
+            <p id="Email"></p>
             <label>Telefone:</label>
-            <p>1193222-3533</p>
+            <p id="Phone"></p>
             <br/>
             <br/>
             <button 
                 style="width: 100px; height: 30px; 
-                margin-top: 20px; margin-bottom: 
-                20px; background-color: rgba(202, 46, 46, 0.63);
+                margin-top: 30px; margin-left: 30px; 
+                background-color: rgba(202, 46, 46, 0.63);
                 border: solid 1px black; cursor: pointer;" 
                 onclick="Exit()" >Log out
             </button>
