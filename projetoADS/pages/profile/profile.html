@@ -8,7 +8,6 @@
     <script>
         function Profile(){
             var sessionId = localStorage.getItem('sessionId');
-            console.log(sessionId);
             const Data = {
                 sessionId,
             };
@@ -17,12 +16,10 @@
                 data: Data,
                 type: 'post',
                 success: function(Response){
-                    console.log(Response);
                     var separados = Response.split('/');
                     var nome = separados[0];
                     var phone = separados[1];
                     var email = separados[2];
-                    console.log(nome)
                     document.querySelector("#Nome").innerHTML = nome;
                     document.querySelector("#Email").innerHTML = email;
                     document.querySelector("#Phone").innerHTML = phone;
@@ -34,10 +31,32 @@
                 data: Data,
                 type: "post",
                 success: function(Response){
-                    console.log(Response);
-                }
-            })
-        };
+                    var Data = JSON.parse(Response);;
+                    // Percorra o JSON e crie uma div para cada objeto
+                    // Selecione o elemento onde você deseja adicionar as divs
+                    const container = document.getElementById("Conteudo_Shows");
+                    // Use .map() para criar divs com base nos dados do JSON
+                    const divs = Data.map((item, index) => {
+                        console.log(typeof(item))
+                        console.log(item);
+                    const div = document.createElement("div");
+                    div.innerHTML = `
+                    <div id="Evento">
+                        <img src="${item.img}" alt="img_show">
+                        <div id="Info_show">
+                            <p>${item.nome_show}</p>
+                        </div>
+                </div> 
+                    `;
+                    return div;
+                    });
+                // Adicione as divs ao contêiner
+                divs.forEach((div) => {
+                container.appendChild(div);
+                });
+                },
+            });
+        };            
         function Exit(){
             localStorage.removeItem('sessionId');
             alert("volte Sempre");
@@ -84,26 +103,7 @@
         <div id="Ingressos">
             <h2>Ingressos comprados</h2>
             <br/>
-            <div id="Conteudo_Shows">
-                <br/>
-                <div id="Evento">
-                    <img src="../../assets/home/gus.jpeg" alt="img_show">
-                    <div id="Info_show">
-                        <p>Gustavo Lima</p>
-                        <p>19:30 - 02/02/2024</p>
-                        <p>Santo Amaro</p>
-                        <p>R$ 150,00</p>
-                    </div>
-                </div> 
-                <div id="Evento">
-                    <img src="../../assets/home/leonardo.jpeg" alt="img_show">
-                    <div id="Info_show">
-                        <p>Leonardo</p>
-                        <p>20:00 - 01/01/2024</p>
-                        <p>Santos</p>
-                        <p>R$ 200,00</p>
-                    </div>
-                </div> 
+            <div id="Conteudo_Shows"> 
             </div> 
         </div>
         </div>
