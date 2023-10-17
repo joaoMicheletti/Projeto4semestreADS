@@ -20,9 +20,14 @@
                     console.log(Response);
                 }
             })
-        }
+        };
+        function Exit(){
+            localStorage.removeItem('sessionId');
+            alert("volte Sempre");
+            window.location.href = "http://127.0.0.1/projetoADS/pages/login/login.html";
+        };
     </script>
-    <title>name project</title>
+    <title>profile</title>
 </head>
 <header>
     <div id="Header_Home">
@@ -48,7 +53,15 @@
             <p>jv604014@gmail.com</p>
             <label>Telefone:</label>
             <p>1193222-3533</p>
-            <a href="/projetoADS/index.php">Log-out</a>
+            <br/>
+            <br/>
+            <button 
+                style="width: 100px; height: 30px; 
+                margin-top: 20px; margin-bottom: 
+                20px; background-color: rgba(202, 46, 46, 0.63);
+                border: solid 1px black; cursor: pointer;" 
+                onclick="Exit()" >Log out
+            </button>
         </div>
         <hr/>
         <div id="Ingressos">

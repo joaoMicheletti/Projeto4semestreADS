@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     ,<link rel="stylesheet" href="./cadastro.css">
-    <title>name project</title>
+    <title>Cadastro</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script>
         function Register(){
@@ -26,7 +26,8 @@
                 alert('Preencha o campo "Senha".');
             } else if(cpass === ''){
                 alert('Preeencha o campo "Confirmar".');
-            } else {
+            } else if(pass === cpass){
+            
                 Data = {
                     nome,
                     phone,
@@ -40,8 +41,10 @@
                     type: 'post',
                     success: function(Response){
                         alert(Response);
-                    }
+                        window.location.href = "http://127.0.0.1/projetoADS/pages/login/login.html";                    }
                 })
+            } else{
+                alert('As senhas não são semelhantes.');
             }
         };
     </script>
@@ -64,7 +67,7 @@
     <div id="Form_Conteiner">
         <h1>Cadastre-se</h1>
         <br/>
-        <form id="Form_Cadastro">
+        <div id="Form_Cadastro">
             <br/>
             <p>
                 Cadastre-se para obter seu login e senha de acesso rápido. 
@@ -117,7 +120,7 @@
             </div>
             <br/>
             <button onclick="Register()" >Cadastrar-se</button>
-        </form>
+        </div>
     </div>
     <br/>
     <footer id="Footer">

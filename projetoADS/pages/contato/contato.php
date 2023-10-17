@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     ,<link rel="stylesheet" href=".//style.css">
-    <title>name project</title>
+    <title>contato</title>
 </head>
 <header>
     <div id="Header_Home">
@@ -12,8 +12,8 @@
         <nav>
             <ul>
                 <a href="/projetoADS">HOME</a>
-                <a href="/projetoADS/pages/login/login.php">LOGIN</a>
-                <a href="/projetoADS/pages/cadastro/cadastro.php">CADASTRAR</a>
+                <a href="/projetoADS/pages/login/login.html">LOGIN</a>
+                <a href="/projetoADS/pages/cadastro/cadastro.html">CADASTRAR</a>
                 <a href="/projetoADS/pages/contato/contato.php">CONTATO</a>
             </ul>
         </nav>
