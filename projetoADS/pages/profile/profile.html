@@ -31,6 +31,7 @@
                 data: Data,
                 type: "post",
                 success: function(Response){ 
+                    console.log(JSON.parse(Response));
                     var Data = JSON.parse(Response);
                     // Percorra o JSON e crie uma div para cada objeto
                     // Selecione o elemento onde você deseja adicionar as divs
@@ -41,10 +42,23 @@
                         console.log(item);
                     const div = document.createElement("section");
                     div.innerHTML = `
-                        <sectio id="E"  style="width: 40%; margin-left: 50px" >
-                            <img src="${item.img}" style="width: 150px; margin-top: 50px" alt="img_show">
+                        <br/>
+                        <section class="custom-card"  id="E"  style="width: 90%; padding: 30px
+                        background: linear-gradient(to bottom, #6F00A9, #bf2273);
+                        border-radius: 10px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        color: #fff;
+                        padding: 20px;
+                        text-align: center;
+                        max-width: 500px; 
+                        margin: 0 auto;
+                        margin-left: 20px;">
+                            <img src="${item.img}" style="width: 150px; margin-top: 50px; border-radius: 10px" alt="img_show">
+                            <br/>
+                            <br/>
+                            <br/>
                             <sectio id="Info_show" style="text-align: center;">
-                                <p style="margin-left: 30px;">${item.nome_show}</p>
+                                <p style="text-align: center; color: black">${item.nome_show}</p>
                             </section>
                         </section> 
                         <br/>

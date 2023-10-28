@@ -41,7 +41,12 @@
                     type: 'post',
                     success: function(Response){
                         alert(Response);
-                        window.location.href = "http://127.0.0.1/projetoADS/pages/login/login.html";                    }
+                        if(Response === "Dados  cadastrado com sucesso."){
+                            window.location.href = "http://127.0.0.1/projetoADS/pages/login/login.html";                    
+                        } else {
+                            alert(Response);
+                        }
+                    }
                 })
             } else{
                 alert('As senhas não são semelhantes.');

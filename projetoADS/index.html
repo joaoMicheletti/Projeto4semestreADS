@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    ,<link rel="stylesheet" href="./style.css">
+    ,
     <title>IngressoFIT</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
     <script>
         function Gustavo(){
             const sessionId = localStorage.getItem('sessionId');
@@ -145,47 +147,55 @@
     </div>
     <div id="Conteiner_Eventos">
         <br/>
-        <h2>Shows</h2>
+        <h2 class="custom-highlight">Shows</h2>
         <div id="Conteudo_Shows">
             <br/>
-            <div id="Evento">
+            <div id="Evento" class="custom-card">
                 <img id="img1" src="./assets/home/gus.jpeg" alt="img_show">
                 <div style="margin-left: 60px; margin-top: 20px;" id="Info_show">
                     <p id="show1">Gustavo Lima</p>
                     <p id="horaData1">19:30 - 02/02/2024</p>
                     <p id="local1">Santo Amaro</p>
                     <p id="preco1">R$ 150,00</p>
-                    <button id="BTN" onclick="Gustavo()">Comprar</button>
+                    <button id="BTN" class="custom-button" onclick="Gustavo()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>                    
                 </div>
             </div> 
-            <div id="Evento">
+            <div id="Evento" class="custom-card">
                 <img id="img2" src="./assets/home/japa.jpeg" alt="img_show">
                 <div style="margin-left: 60px; margin-top: 20px;" id="Info_show">
                     <p id="show2">Japinha Conde</p>
                     <p id="horaData2">15:00 - 03/03/2024</p>
                     <p id="local2">Ossasco</p>
                     <p id="preco2">R$ 190,00</p>
-                    <button id="BTN" onclick="Japinha()">Comprar</button>
+                    <button id="BTN" class="custom-button" onclick="Japinha()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>     
                 </div>
             </div> 
-            <div id="Evento">
+            <div id="Evento" class="custom-card">
                 <img id="img3" src="./assets/home/joao.jpeg" alt="img_show">
                 <div style="margin-left: 60px; margin-top: 20px;" id="Info_show">
-                    <p id="show3">João Gomes</p>
+                    <h1 class="custom-heading"><p id="show3">João Gomes</p></h1>
                     <p id="horaData3">20:00 - 15/04/2024</p>
                     <p id="local3">Barretos</p>
                     <p id="preco3">R$ 500,00</p>
-                    <button id="BTN" onclick="Joao()">Comprar</button>
+                    <button id="BTN" class="custom-button" onclick="Joao()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>     
                 </div>
             </div> 
-            <div id="Evento">
+            <div id="Evento" class="custom-card">
                 <img id="img4"  src="./assets/home/ryan.jpeg" alt="img_show">
                 <div style="margin-left: 60px; margin-top: 20px;" id="Info_show">
                     <p id="show4">MC RyanSP</p>
                     <p id="horaData4">00:00 - 13/06/2024</p>
                     <p id="local4">Paulista</p>
                     <p id="preco4">R$ 230,00</p>
-                    <button id="BTN" onclick="Ryan()" >Comprar</button>
+                    <button id="BTN" class="custom-button" onclick="Ryan()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>     
                 </div>
             </div> 
         </div>

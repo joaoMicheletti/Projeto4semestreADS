@@ -71,6 +71,9 @@ hr {
     margin-top: 30px;
     width: 100%;
 }
+#Conteudo_Shows section #E {
+    background: linear-gradient(to right, #BA00E0, #FF6B95); 
+}
 #Evento {
     display: flex;
     width: 40%;

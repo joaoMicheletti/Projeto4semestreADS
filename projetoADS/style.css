@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
 }
 #Header_Home {
     margin-top: -19px;
     padding: 0;
     width: 100%;
     height: 100px;
-    background-color: rgb(11, 11, 53);
+    background-color:#1B1B3A;
 }
 #Header_Home img {
     margin-top: 7px;
@@ -26,7 +35,7 @@
     color: white;
 }
 #Header_Home nav a:hover{
-    color: rgb(59, 57, 57);
+    color: rgb(112, 15, 64);
 }
 
 #Propaganda_Body {
@@ -54,20 +63,23 @@
     margin-left: 5%;
     margin-bottom: 40px;
     border-radius: 15px;
-    border: solid rgba(43, 42, 42, 0.514) 1px;
+    
 }
 #Evento img {
     margin-left: 10px;
     width: 150px;
+    border-radius: 10px;
 }
 #Evento div {
     margin-left: 20px;
     text-align: center;
+    
 }
 #Evento div p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     line-height: 30px;
+    margin: 5px;
 }
 #Evento:hover{
     width: 42%;
@@ -80,7 +92,7 @@
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    background-color: rgb(11, 11, 53);
+    background-color: #1B1B3A;
 }
 #Footer ul {
     margin-top: 20px;
@@ -100,9 +112,107 @@
 #Down {
     width: 100%;
     height: auto;
-    background-color: rgb(136, 71, 197);
+    background: linear-gradient(to bottom, #1B1B3A, #6F00A9);
 }
 #Down p {
     margin-left: 30px;
     color: white;
+}
+
+.custom-button {
+    background: linear-gradient(to bottom, #000, #333); 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.custom-button:hover {
+    background: linear-gradient(to bottom, #333, #666); 
+}
+
+
+.custom-card {
+    background: linear-gradient(to bottom, #6F00A9, #bf2273);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+.custom-card h3 {
+    font-size: 24px;
+}
+
+.custom-card p {
+    font-size: 16px;
+    display: flex;
+}
+.custom-heading {
+    font-size: 44px;
+    color: #fff; 
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #Evento {
+        max-width: 100%; 
+        margin: 0 20px; 
+    }
+    #Evento h3 {
+        font-size: 20px; 
+    }
+    
+    #Evento p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    #Conteiner_Eventos {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #Conteudo_Shows {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    #Evento {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    #Evento img {
+        margin-left: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #Evento div {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #Evento:hover {
+        width: 100%;
+    }
+}
+.custom-highlight {
+    background: linear-gradient(to right, #BA00E0, #FF6B95); 
+    font-size: 46px; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    text-align: center;
 }
